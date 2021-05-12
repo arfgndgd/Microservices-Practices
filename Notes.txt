@@ -28,3 +28,7 @@ Veritabaný ile ilgili iþlemler için appsettings.json klasöründeki DatabaseSettin
 	
 	Startup.cs => DatabaseSettings classý için services.Configure
 				  IDatabaseSettings interfacei için services.AddSingleton
+
+Services klasörünü aç
+	CategoryService => ICategoryService
+		Startup.cs => services.AddScoped<>

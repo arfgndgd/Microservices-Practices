@@ -5,7 +5,7 @@ using System.Text.Json.Serialization;
 
 namespace FreeCourse.Shared.Dtos
 {
-    public class ResponseDto<T>
+    public class Response<T>
     {
         //Dışarıdan set edilmesini istemediğimiz için "private set" yaptık zaten nesne örneği metodda dönüyor
 
@@ -22,21 +22,21 @@ namespace FreeCourse.Shared.Dtos
         public List<string> Errors { get; set; }
 
         //başarılı ve data alır
-        public static ResponseDto<T> Success(T data, int statusCode)
+        public static Response<T> Success(T data, int statusCode)
         {
-            return new ResponseDto<T> { Data = data, StatusCode = statusCode, IsSuccessful = true };
+            return new Response<T> { Data = data, StatusCode = statusCode, IsSuccessful = true };
         }
 
         //başarılı ama data almayabilir
-        public static ResponseDto<T> Success(int statusCode)
+        public static Response<T> Success(int statusCode)
         {
-            return new ResponseDto<T> { Data = default(T), StatusCode = statusCode, IsSuccessful = true };
+            return new Response<T> { Data = default(T), StatusCode = statusCode, IsSuccessful = true };
         }
 
         //birden çok hata için
-        public static ResponseDto<T> Fail (List<string> errors, int statusCode)
+        public static Response<T> Fail (List<string> errors, int statusCode)
         {
-            return new ResponseDto<T>
+            return new Response<T>
             {
                 Errors = errors,
                 StatusCode = statusCode,
@@ -45,9 +45,9 @@ namespace FreeCourse.Shared.Dtos
         }
 
         //tek bir hata için
-        public static ResponseDto<T> Fail(string errors, int statusCode)
+        public static Response<T> Fail(string errors, int statusCode)
         {
-            return new ResponseDto<T>
+            return new Response<T>
             {
                 Errors = new List<string>() { errors},
                 StatusCode = statusCode,
