@@ -1,4 +1,6 @@
 
+API OLUÞTURMA
+
 Catalog
 FreeCourse.Services.Catalog
 MongoDB.Driver indir.
@@ -8,5 +10,21 @@ MongoDB.Driver indir.
 Shared
 FreeCourse.Shared
 	Dtos
+		Classlarý aç
 
+Catalog
+FreeCourse.Services.Catalog
+	Models
+		Classlarý aç
 
+AutoMapper.Extensions.Microsoft.DependencyInjection kütüphanesini indir
+	Startup.cs => ConfigureServices => addAutoMapper();
+
+Mapping için General Mapping classýnda ReverseMap iþlemlerine uygun classlarý yazz
+
+Veritabaný ile ilgili iþlemler için appsettings.json klasöründeki DatabaseSettings jsonlarýna göre propertyler yazýyoruz.
+	Settings
+		appsettings.json içindeki DatabaseSettings'in içindeki tanýmlamalara özel interface ve class açtýk
+	
+	Startup.cs => DatabaseSettings classý için services.Configure
+				  IDatabaseSettings interfacei için services.AddSingleton
