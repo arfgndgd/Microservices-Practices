@@ -31,4 +31,5 @@ Veritabaný ile ilgili iþlemler için appsettings.json klasöründeki DatabaseSettin
 
 Services klasörünü aç
 	CategoryService => ICategoryService
+	CourseService => ICourseService
 		Startup.cs => services.AddScoped<>
