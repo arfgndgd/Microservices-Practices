@@ -1,0 +1,12 @@
+
+Catalog
+FreeCourse.Services.Catalog
+MongoDB.Driver indir.
+	Models
+		Classlarý aç
+
+Shared
+FreeCourse.Shared
+	Dtos
+
+
