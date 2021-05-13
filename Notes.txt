@@ -14,7 +14,9 @@ FreeCourse.Shared
 
 Catalog
 FreeCourse.Services.Catalog
-	Models
+	Dtos
+		Classlarý aç
+	Mapping
 		Classlarý aç
 
 AutoMapper.Extensions.Microsoft.DependencyInjection kütüphanesini indir
@@ -33,3 +35,11 @@ Services klasörünü aç
 	CategoryService => ICategoryService
 	CourseService => ICourseService
 		Startup.cs => services.AddScoped<>
+
+Controllers
+	CourseController : CustomBaseController
+
+Shared
+FreeCourse.Shared
+	ControllerBases
+		CustomBaseController (Bu class ControllerBase'den miras almak zorunda ancak Shared projesi yapý itibari ile nuget olarak müsade etmez. Edit Project File ile "Microsoft.AspNetCore.App" eklememiz lazým)
