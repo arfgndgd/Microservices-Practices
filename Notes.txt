@@ -65,3 +65,26 @@ MONGO'yu kullanacaðýmýz için portainer içinde ayarlamalarý yapýp Mongo'yu contai
 			
 MongoDb Compass aç 
 	Yeni baðlantý için appsettins.json içinde belirlediðimiz ConnectionStringi yapýþtýr "mongodb://localhost:27017" 
+
+			**** TEST YAPILDI (swaggerda çalýþýyor)****
+
+
+IdentityServer(Microservice)
+IdentityServer github > IdentityServer4.Templates > dotnet new -i identityserver4.templates (terminale yaz)
+Proje dosyasý içine IdentityServer klasörünü ekliyoruz. 
+	Dosya yolunu kopyala 
+	Terminal > clear > dosya yolunu yapýþtýr > Enter > dotnet new is4aspid --name FreeCourse.IdentityServer
+	**yeni bir proje oluþmuþ oldu
+			Bu projeyi IdentityServer klasörü açýp projemize ekliyoruz > add existing project...
+
+	Portainer > app templates > sql server(linux) > isim ver, þifre ver 
+													host => container ayný 1433
+
+FreeCourse.IdentityServer 
+**Dependencies>Packages>Authentication sürümüne göre göre nuget olarak ef core sql server indir ()
+
+	Data içinde Migrationý sil > appsetting.json içinde DefaultConnectioný IdentityServer için düzenle (Portainer > Sql Server)
+	Startup.cs > ConfigureServices > services.SqlLite sil service.UseSqlServer ekle 
+	Program.cs içinde metodda try catch içindeki hazýr if yapýlarýný sil ve kendi yapýný yaz
+	Startup Project olarak FreeCourse.IdentityServer seç > Package Manager Consoleda da seç 
+			add-migration name						
