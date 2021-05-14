@@ -43,3 +43,25 @@ Shared
 FreeCourse.Shared
 	ControllerBases
 		CustomBaseController (Bu class ControllerBase'den miras almak zorunda ancak Shared projesi yapý itibari ile nuget olarak müsade etmez. Edit Project File ile "Microsoft.AspNetCore.App" eklememiz lazým)
+
+
+Catalog
+FreeCourse.Services.Catalog
+Controllers
+	CategoryController
+
+	*** PORTAINER => Pcdeki containerlarý, imajlarý yönetmek için kullanýlýr ***
+
+	 Portainer.io > Install > Install Guide > Community Edition > Docker
+				PowerShell aç > 1.Step > docker volume create portainer_data
+								2.Step > docker run -d -p 8000:8000 -p 9000:9000 --name=portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce		
+		                        3.Step > localhost:9000 
+
+
+MONGO'yu kullanacaðýmýz için portainer içinde ayarlamalarý yapýp Mongo'yu container olarak ayaða kaldýracaðýz
+	App Templates > Mongo
+		Port Mapping yapýyoruz host == container (27017) (baþka bir þeye ellemeye gerek yok tek database ismi verdik)
+			Deploy the container (containerýn ayaða kalkmasýný bekliyoruz eðer yoksa imageý dockerhubtan çekecek(üyelik ister))
+			
+MongoDb Compass aç 
+	Yeni baðlantý için appsettins.json içinde belirlediðimiz ConnectionStringi yapýþtýr "mongodb://localhost:27017" 
