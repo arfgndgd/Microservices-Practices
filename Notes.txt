@@ -87,4 +87,9 @@ FreeCourse.IdentityServer
 	Startup.cs > ConfigureServices > services.SqlLite sil service.UseSqlServer ekle 
 	Program.cs içinde metodda try catch içindeki hazýr if yapýlarýný sil ve kendi yapýný yaz
 	Startup Project olarak FreeCourse.IdentityServer seç > Package Manager Consoleda da seç 
-			add-migration name						
+			add-migration name  >  update-database 
+				DBeaver (artý iþareti ile ekle)
+
+ENDPOINT oluþturma > Singup endpoint
+	Controllers > UserController (API)
+	Dtos > SingupDto
