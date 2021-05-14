@@ -1,6 +1,5 @@
 ﻿using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
-using MongoDB.Driver.Core.Misc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -31,11 +30,11 @@ namespace FreeCourse.Services.Catalog.Models
         [BsonRepresentation(BsonType.DateTime)]
         public DateTime CreatedTime { get; set; }
   
+        public Feature Feature { get; set; }
+
         [BsonRepresentation(BsonType.ObjectId)]
         public string CategoryId { get; set; }
 
-        //Relational Properties
-        public Feature Feature { get; set; }
         [BsonIgnore]//veritabanında bi karşılığı olmadığı için böyle işaretliyoruz
         public Category Category { get; set; }
 

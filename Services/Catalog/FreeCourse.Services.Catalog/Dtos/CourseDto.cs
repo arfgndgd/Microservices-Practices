@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace FreeCourse.Services.Catalog.Dtos
 {
-    internal class CourseDto
+    public class CourseDto
     {
         public string Id { get; set; }
 
@@ -21,10 +21,10 @@ namespace FreeCourse.Services.Catalog.Dtos
 
         public DateTime CreatedTime { get; set; }
 
+        public FeatureDto Feature { get; set; }
+
         public string CategoryId { get; set; }
 
-        //Relational Properties
-        public FeatureDto Feature { get; set; }
         public CategoryDto Category { get; set; }
     }
 }
