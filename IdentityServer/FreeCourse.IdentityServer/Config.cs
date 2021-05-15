@@ -57,6 +57,7 @@ namespace FreeCourse.IdentityServer
                 {
                     ClientName ="Asp.Net Core Mvc",
                     ClientId="WebMvcClientForUser",
+                    AllowOfflineAccess=true, //izin verdik
                     ClientSecrets = {new Secret("secret".Sha256())}, //şifre
                     AllowedGrantTypes = {GrantType.ResourceOwnerPassword}, //akış tipi
                     

@@ -101,7 +101,10 @@ ENDPOINT oluþturma > Singup endpoint
 				.AddInMemoryApiResources(Config.ApiResources)
 
 ****
-Token testi için Postman "https://localhost:5001/connect/token" bu urlye "Post" türünde "Body" sekmesinde x-www-form..dan istek yolla (identity server docs > endpoint > client_id, secret, client_credentials)
+Token testi için Postman "https://localhost:5001/connect/token" bu urlye "Post" türünde "Body" sekmesinde x-www-form..dan istek yolla (identity server docs > endpoint > 
+					client_id => WebMvcClient, 
+					client_secret => secret,
+					grant_type => client_credentials)
 ****
 
 UserController/Signup endpoint testi
@@ -136,5 +139,10 @@ IdentityServer
 	
 	Config.cs
 		IdentityResource > yeni Resources ekle
-		Client > yukarýdaki IdentityResource göre new Client
+		Client > yukarýdaki IdentityResource göre new Client ekle ona göre de test yap
 
+ *** Resource Owner Password grant type ile token alma (POSTMAN)
+			Token testi için Postman "https://localhost:5001/connect/token" bu urlye "Post" türünde "Body" sekmesinde x-www-form..dan istek yolla (identity server docs > endpoint > 
+					client_id => WebMvcClientFor, 
+					client_secret => secret,
+					grant_type => password (Resource Owner Password))
