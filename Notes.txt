@@ -126,4 +126,15 @@ FreeCourse.Services.Catalog
 	**** TEST > Solution sað týk > Set Startup Projects > Multiple startup project > IdentityServer & Catalog
 				Postman > https://localhost:5001/ GET Sending
 
-				
+
+Token Üretme (username/email & password)		
+IdentityServer
+	Services klasörü ekle
+		IdentityResourceOwnerPasswordValidator classýný aç
+		Startup.cs
+			ConfigureService => token üretmek için builder.AddResourceOwnerValidator<IdentityResourceOwnerPasswordValidator>(); ekle
+	
+	Config.cs
+		IdentityResource > yeni Resources ekle
+		Client > yukarýdaki IdentityResource göre new Client
+
