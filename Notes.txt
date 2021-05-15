@@ -114,7 +114,16 @@ UserController/Signup endpoint testi
 			authorization > Type > OAuth2.O > tokeni yapýþtýr
 			SENDING > DBeaver yeni kayýt geldi
 
-
-
+CATALOG.API koruma altýna alma
+FreeCourse.Services.Catalog
+	Manage Nuget => jwtBearer
+	appsettings.json >   "IdentityServerURL": "http://localhost:5001"
+	Startup.cs => ConfigureServices > services.AddAuthentication
+				  Configure >  app.UseAuthentication();	 
+			
+			IdentityServer projesinde > Properties > launchSettings.json > url'yi http'ye çevir
+	
+	**** TEST > Solution sað týk > Set Startup Projects > Multiple startup project > IdentityServer & Catalog
+				Postman > https://localhost:5001/ GET Sending
 
 				
