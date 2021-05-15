@@ -99,3 +99,7 @@ ENDPOINT oluşturma > Singup endpoint
 		ApiResource, IdentityResource, ApiScope ,Client 
 			Startup.cs => ApiResource sonradan eklendiği için burada tanımlama (IdentityResources'ın altına)
 				.AddInMemoryApiResources(Config.ApiResources)
+
+****
+Token testi için Postman "https://localhost:5001/connect/token" bu urlye "Post" türünde "Body" sekmesinde x-www-form..dan istek yolla (identity server docs > endpoint > client_id, secret, client_credentials)
+****

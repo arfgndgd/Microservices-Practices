@@ -42,7 +42,7 @@ namespace FreeCourse.IdentityServer
                     ClientName ="Asp.Net Core Mvc",
                     ClientId="WebMvcClient",
                     ClientSecrets = {new Secret("secret".Sha256())}, //şifre
-                    AllowedGrantTypes = GrantType.ClientCredentials, //akış tipi
+                    AllowedGrantTypes = {GrantType.ClientCredentials}, //akış tipi
                     AllowedScopes = { "catalog_fullpermission", "photo_stock_fullpermission", IdentityServerConstants.LocalApi.ScopeName } //hangi scope istek yapabilir (ApiScope)
                     
                 
