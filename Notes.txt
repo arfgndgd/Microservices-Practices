@@ -93,3 +93,9 @@ FreeCourse.IdentityServer
 ENDPOINT oluþturma > Singup endpoint
 	Controllers > UserController (API)
 	Dtos > SingupDto
+
+ **** JWT (Json Web Token) => Token daðýtan identityServer token alan Aps.Net Core Mvc
+		Config.cs
+		ApiResource, IdentityResource, ApiScope ,Client 
+			Startup.cs => ApiResource sonradan eklendiði için burada tanýmlama (IdentityResources'ýn altýna)
+				.AddInMemoryApiResources(Config.ApiResources)
