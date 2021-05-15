@@ -51,6 +51,7 @@ namespace FreeCourse.IdentityServer
                     if (!userManager.Users.Any())
                     {
                         userManager.CreateAsync(new ApplicationUser { UserName = "arif",Email="gundogduarif4@gmail.com",City="Kocaeli"}, "Password12*").Wait(); //wait metodu sekron olarak çalışmasını sağlar 
+                        //Password Authorizationa uygun olarak yazılmalı
                     }
 
                 }

@@ -103,3 +103,18 @@ ENDPOINT oluşturma > Singup endpoint
 ****
 Token testi için Postman "https://localhost:5001/connect/token" bu urlye "Post" türünde "Body" sekmesinde x-www-form..dan istek yolla (identity server docs > endpoint > client_id, secret, client_credentials)
 ****
+
+UserController/Signup endpoint testi
+	UserController => [Authorize(LocalApi.PolicyName)] +  [Route("api/[controller]/[action]")]
+	Startup.cs => services.AddLocalApiAuthentication(); + app.Authentication	
+		
+		***Postman test*** (Projeyi çalıştır)
+			url = https://localhost:5001/api/user/signup (POST)
+			body > json > yeni user ekle (username, password, city, email)
+			authorization > Type > OAuth2.O > tokeni yapıştır
+			SENDING > DBeaver yeni kayıt geldi
+
+
+
+
+				
